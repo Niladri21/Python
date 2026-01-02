@@ -2,22 +2,24 @@
 
 temp = float(input("Enter the temperature in Celsius: "))
 
-is_sunny = input("Is it sunny? (yes/no): ").strip().lower() == 'yes'
+is_sunny = input("Is it sunny? (yes/no): ").strip().lower() 
 
-if temp >= 28 and is_sunny:
-    print("It's a hot and sunny day!")
+def check_temp(x):
+    if x <= 0:
+        return 'freezing'
+    elif x > 0 and x <= 28:
+        return 'cold'
+    else:
+        return 'hot'
 
-elif temp <= 0 and is_sunny:
-    print("It's a cold and sunny day!")
+def check_sunny(x):
+    if x == 'yes':
+        return 'sunny'
+    else:
+        return 'cloudy'
 
-elif 28 > temp > 0 and is_sunny:
-    print("It's a warm and sunny day!")
+temp_final = check_temp(temp)
+sunny_final = check_sunny(is_sunny)
 
-elif temp >= 28 and not is_sunny:
-    print("It's a hot and cloudy day!")
+print(f"It's {temp_final} and {sunny_final} outside!")
 
-elif temp <= 0 and not is_sunny:
-    print("It's a cold and cloudy day!")
-    
-elif 28 > temp > 0 and not is_sunny:
-    print("It's a warm and cloudy day!")

@@ -9,4 +9,4 @@ elif unit == "F":
     temp = round((temp - 32) * 5 / 9, 1)
     print(f"The temperature in Celsius is: {temp}°C")  
 else:
-    print(f"Invalid Unit: {unit}. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
+    print(f"Invalid Unit: {unit}. Please enter 'C' for Celsius or 'F' for Fahrenheit")
